@@ -1,0 +1,36 @@
+import decimal
+decimal.getcontext().prec = 50
+startnum = 0
+num1 = decimal.Decimal("0")
+num2 = decimal.Decimal("0")
+count = 0
+while startnum == 0:
+    startnum = int(input("Enter a non-0 integer to find the root of:\n"))
+    if startnum == 0:
+        print("The number cannot be 0")
+
+if startnum < 0:
+    findingnum = abs(startnum)
+else:
+    findingnum = startnum
+num1 = decimal.Decimal(str(findingnum))
+num2 = decimal.Decimal("1")
+
+while num1 != num2:
+    num1 = (num1+num2)/2
+    num2 = findingnum/num1
+    print("the long side is " + str(num1) + " and the short side is " + str(num2))
+    count += 1
+    if count > 1000:
+        break
+
+if num1 == int(num1):
+    answer = int(num1)
+else:
+    answer = num1
+
+if startnum < 0:
+    print("the square root of " + str(startnum) + " is (approximately) " + str(answer) + "i")
+else:
+    print("the square root of " + str(startnum) + " is (approximately) " + str(answer))
+
