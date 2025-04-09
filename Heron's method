@@ -30,7 +30,7 @@ else:
     answer = num1
 
 if startnum < 0:
-    print("the square root of " + str(startnum) + " is (approximately) " + str(answer) + "i")
+    print("the square root of " + str(startnum) + " is (approximately) " + str(answer) + "i or " + str(-abs(answer)))
 else:
-    print("the square root of " + str(startnum) + " is (approximately) " + str(answer))
+    print("the square root of " + str(startnum) + " is (approximately) " + str(answer) + " or " str(-abs(answer)))
 
